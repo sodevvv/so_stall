@@ -26,12 +26,7 @@ AddEventHandler(GetCurrentResourceName() .. ':SpawnStand', function ()
                 },
             }) then
             local props = MainConfig.Props
-            local model = props
-
-            if type(props) == 'string' then
-                model = GetHashKey(props)
-            end
-
+            local model = GetHashKey(props)
             local playerPed = PlayerPedId()
             local coords = GetEntityCoords(playerPed)
             local heading = GetEntityHeading(playerPed)
